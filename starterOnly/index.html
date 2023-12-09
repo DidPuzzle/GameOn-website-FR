@@ -71,6 +71,8 @@
                   id="first"
                   name="first"
                   minlength="2"
+                  required
+                  placeholder="Didier"
                 /><br>
               </div>
               <div
@@ -81,6 +83,9 @@
                   type="text"
                   id="last"
                   name="last"
+                  minlength="2"
+                  required
+                  placeholder="DOE"
                 /><br>
               </div>
               <div
@@ -91,6 +96,9 @@
                   type="email"
                   id="email"
                   name="email"
+                  required
+                  pattern=".+@.+\..+"
+                  placeholder="didierdoe@gmail.com"
                 /><br>
               </div>
               <div
@@ -101,12 +109,13 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  required
                 /><br>
               </div>
               <div
                 class="formData">
-                <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -116,7 +125,7 @@
                   type="radio"
                   id="location1"
                   name="location"
-                  value="New York"
+                  value="New York" checked
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -186,24 +195,24 @@
                   type="checkbox"
                   id="checkbox1"
                   checked
+                  name="accepter les conditions"
                 />
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <input class="checkbox-input" type="checkbox" id="checkbox2" name="newsletter"/>
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
               </div>
               <input
-                class="btn-submit"
+                class="btn-submit button"
                 type="submit"
-                class="button"
-                value="C'est parti"
+                value="C'est parti" 
               />
             </form>
           </div>
