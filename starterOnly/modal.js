@@ -26,23 +26,18 @@ if(closeModalButton == null) throw new Error("No close button found");
 if(conditionsAcceptedCheckbox == null) throw new Error("no checkbox found");
 
 /*Appel aux évenements*/
-
-form.addEventListener("submit",(e) => {
-  e.preventDefault();
-  checkIfConditionsAccepted(e);
-  form.submit();
-});
+/*Pour chaque élément invalide : déclaration de message*/
 firstNameInput.addEventListener("invalid",(e) => flashErrorMessage(e, "Veuillez entrer 2 caractères ou plus pour le champ prénom"));
 lastNameInput.addEventListener("invalid",(e) => flashErrorMessage(e, "Veuillez entrer 2 caractères ou plus pour le champ nom"));
 emailInput.addEventListener("invalid",(e) => flashErrorMessage(e, "Veuillez entrer une adresse email valide"));
 birthdateInput.addEventListener("invalid",(e) => flashErrorMessage(e, "Vous devez entrer votre date de naissance"));
 location1.addEventListener("invalid",(e) => {flashErrorMessage(e, "Vous devez choisir une option");})
-
-conditionsAcceptedCheckbox.addEventListener("invalid",(e) =>{
-  flashErrorMessage(e, "vous devez accepter les conditions d'utilisation");
+conditionsAcceptedCheckbox.addEventListener("invalid",(e) =>{flashErrorMessage(e, "vous devez accepter les conditions d'utilisation");
 });
+form.addEventListener("submit", handleSubmit) 
 
 
+/*quand je m'inscrit je lance la modale*/
 modalButtons.forEach((btn) => btn.addEventListener("click", launchModal));
 closeModalButton.addEventListener("click",closeModal);
 
@@ -50,9 +45,15 @@ closeModalButton.addEventListener("click",closeModal);
 // déclaration des fonctions
 
 function validateForm(event) {
-
 }
 
+function handleSubmit() {
+  if(form == null) throw new Error("No form found");
+  if(form.checkValidity()) {
+    document.querySelector(".modal-body").innerHTML = "Merci Pour votre Inscription"
+    /*alert("Merci ! Votre réservation a été reçue");*/
+  }
+}
 
 
 function closeModal() {
@@ -67,7 +68,7 @@ function launchModal() {
 
 
 }
-
+/* au click du hamberger ouvre le menu*/
 function editNav() {
   const topNavbar = document.getElementById("myTopnav");
   if(topNavbar == null) throw new Error("No topNavbar found");
@@ -89,5 +90,6 @@ function removeErrorMessage() {
     errorMessage.removeAttribute("data-error-visible");
   });
 }
+
 
 
