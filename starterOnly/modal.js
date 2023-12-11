@@ -42,8 +42,7 @@ conditionsAcceptedCheckbox.addEventListener("invalid",(e) =>{
   flashErrorMessage(e, "vous devez accepter les conditions d'utilisation");
 });
 
-// launch modal event
-//conditionsAcceptedCheckbox.addEventListener("change", checkIfConditionsAccepted);
+
 modalButtons.forEach((btn) => btn.addEventListener("click", launchModal));
 closeModalButton.addEventListener("click",closeModal);
 
@@ -53,19 +52,7 @@ closeModalButton.addEventListener("click",closeModal);
 function validateForm(event) {
 
 }
-/*function checkIfConditionsAccepted(event) {
-  //if(submitButton == null) throw new Error("No submit button found");
-  //const target = event.target;
- // console.log("target",target);
-  //if(conditionsAcceptedCheckbox == null) throw new Error("No checkbox found");
-  //const isChecked = event.target.checked;
- // const isChecked = conditionsAcceptedCheckbox.checked;
- // if(!isChecked){
-  //if(isChecked) return submitButton.removeAttribute("disabled");
-  //submitButton.setAttribute("disabled","true");
-  //flashErrorMessage(event, "vous devez accepter les conditions d'utilisation");
-}
-}*/
+
 
 
 function closeModal() {
