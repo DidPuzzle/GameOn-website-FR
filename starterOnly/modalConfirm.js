@@ -1,4 +1,5 @@
 // Constante : 
+// Constante : 
 const btnSubmit = document.querySelector(".btn-submit");
 const modalConfirmation = document.querySelector(".formConfirmation");
 const btnCloseConfirm = document.querySelector(".btn-close-confirm");
