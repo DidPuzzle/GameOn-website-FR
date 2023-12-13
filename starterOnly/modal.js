@@ -3,7 +3,7 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const closeBtn = document.querySelector(".close");
 
-// Fonction pour ouvrire la modale :
+// Fonction pour ouvrir la modale :
 
 modalBtn.forEach((btn) => btn.addEventListener("click", () => {
   modalbg.style.display = "block";

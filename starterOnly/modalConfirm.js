@@ -1,4 +1,4 @@
-// Constante : 
+
 // Constante : 
 const btnSubmit = document.querySelector(".btn-submit");
 const modalConfirmation = document.querySelector(".formConfirmation");
@@ -14,9 +14,7 @@ btnSubmit.addEventListener('click', e => {
     if(firstNameControle() && lastNameControle() && emailControle() && birthdateControle() && quantityControle() && checkboxLocationControl() && conditionCheckboxControle()){
         modalConfirmation.style.display = "block";
         form.style.display = 'none';
-    } /*else {
-        alert('Merci de remplir correctement votre inscription.');
-    }*/
+    } 
 })
 
 

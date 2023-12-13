@@ -1,4 +1,4 @@
- //Déclaration de mes variables first et firstNameError :
+ //Déclaration de mes variables first et firstNameError et selection d'élément :
  let firstName = document.querySelector("#first");
  let firstNameError = document.querySelector("#firstNameError");
  
@@ -26,7 +26,7 @@
              
  }
 
- //AddEventListener pour le controle de l'input firstName :
+ //AddEventListener pour le contrôle de l'input firstName :
  firstName.addEventListener('change', () => {
      firstNameControle();
  });
